@@ -2,11 +2,21 @@ package models;
 
 import java.util.List;
 
+import javax.persistence.OneToMany;
+
+import siena.Column;
+import siena.Index;
+import siena.Table;
+
 import models.enumeration.AccountCategory;
 
-public class Account {
+@Table("account")
+public class Account extends Root {
+	@Column("name")
 	public String name;
-	public AccountCategory category;
 
+	@Index("category")
+	public AccountCategory category;
+	@OneToMany
 	List<User> users;
 }

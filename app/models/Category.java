@@ -1,10 +1,18 @@
 package models;
 
+import siena.Column;
+import siena.Generator;
+import siena.Id;
+import siena.Index;
+import siena.Table;
 import models.enumeration.CategoryType;
 import models.interfaces.IShared;
 
-public class Category implements IShared {
+@Table("category")
+public class Category extends Root implements IShared {
+
+	@Column("name")
 	public String name;
-	public Account account;
+	@Index("type")
 	public CategoryType type;
 }

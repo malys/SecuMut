@@ -1,1 +1,6 @@
 .settings/
+tmp/
+eclipse/
+eclipse/
+eclipse/classes/controllers/
+eclipse/classes/models/
